@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array-Methoden in JavaScript</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold mb-8">Array-Methoden in JavaScript</h1>
+
+      <!-- map() -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">map()</h2>
+        <p class="mb-4">
+          Die map()-Methode erstellt ein neues Array mit den Ergebnissen der auf
+          jedes Element angewendeten Funktion:
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>const zahlen = [1, 2, 3, 4, 5];
+const quadrate = zahlen.map((zahl) => zahl * zahl);
+console.log(quadrate);</code></pre>
+        <p>
+          Ergebnis:
+          <span class="bg-green-200 p-1 rounded">[1, 4, 9, 16, 25]</span>
+        </p>
+      </div>
+
+      <!-- filter() -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">filter()</h2>
+        <p class="mb-4">
+          Die filter()-Methode erstellt ein neues Array mit allen Elementen, die
+          den Test der angegebenen Funktion bestehen:
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>const zahlen = [1, 2, 3, 4, 5];
+const geradeZahlen = zahlen.filter((zahl) => zahl % 2 === 0);
+console.log(geradeZahlen);</code></pre>
+        <p>Ergebnis: <span class="bg-green-200 p-1 rounded">[2, 4]</span></p>
+      </div>
+
+      <!-- reduce() -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">reduce()</h2>
+        <p class="mb-4">
+          Die reduce()-Methode führt eine Funktion für jedes Element im Array
+          aus (von links nach rechts) und reduziert das Array auf einen einzigen
+          Wert:
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>const zahlen = [1, 2, 3, 4, 5];
+const summe = zahlen.reduce((akkumulator, zahl) => akkumulator + zahl, 0);
+console.log(summe);</code></pre>
+        <p>Ergebnis: <span class="bg-green-200 p-1 rounded">15</span></p>
+      </div>
+
+      <!-- find() -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">find()</h2>
+        <p class="mb-4">
+          Die find()-Methode gibt den Wert des ersten Elements im Array zurück,
+          das die Testfunktion erfüllt. Andernfalls wird undefined
+          zurückgegeben:
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>const zahlen = [1, 2, 3, 4, 5];
+const ersteUngeradeZahl = zahlen.find((zahl) => zahl % 2 === 1);
+console.log(ersteUngeradeZahl);</code></pre>
+        <p>Ergebnis: <span class="bg-green-200 p-1 rounded">1</span></p>
+      </div>
+      <!-- some() -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">some()</h2>
+        <p class="mb-4">
+          Die some()-Methode testet, ob mindestens ein Element im Array die
+          Testfunktion erfüllt:
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>const zahlen = [1, 2, 3, 4, 5];
+const hatUngeradeZahl = zahlen.some((zahl) => zahl % 2 === 1);
+console.log(hatUngeradeZahl);</code></pre>
+        <p>Ergebnis: <span class="bg-green-200 p-1 rounded">true</span></p>
+      </div>
+
+      <!-- every() -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">every()</h2>
+        <p class="mb-4">
+          Die every()-Methode testet, ob alle Elemente im Array die Testfunktion
+          erfüllen:
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>const zahlen = [1, 2, 3, 4, 5];
+const sindAlleZahlenUngerade = zahlen.every((zahl) => zahl % 2 === 1);
+console.log(sindAlleZahlenUngerade);</code></pre>
+        <p>Ergebnis: <span class="bg-green-200 p-1 rounded">false</span></p>
+      </div>
+    </div>
+  </body>
+</html>

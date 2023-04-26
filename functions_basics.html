@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grundlagen von Funktionen in JavaScript</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold mb-8">
+        Grundlagen von Funktionen in JavaScript
+      </h1>
+
+      <!-- Funktionen -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">Funktionen</h2>
+        <p class="mb-4">
+          Funktionen sind wiederverwendbare Codeblöcke, die eine bestimmte
+          Aufgabe ausführen und gegebenenfalls einen Wert zurückgeben. Sie
+          können Parameter akzeptieren und auf diese Weise flexibel gestaltet
+          werden:
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>function summe(a, b) {
+  return a + b;
+}
+
+const ergebnis = summe(5, 3);
+console.log('Ergebnis:', ergebnis);</code></pre>
+        <p>
+          Ergebnis: <span class="bg-green-200 p-1 rounded">Ergebnis: 8</span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

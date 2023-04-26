@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Var, Let und Const in JavaScript</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold mb-8">Var, Let und Const in JavaScript</h1>
+
+      <!-- Var -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">Var</h2>
+        <p class="mb-4">
+          Die `var`-Anweisung deklariert eine Variable und weist ihr optional
+          einen Wert zu. Variablen, die mit `var` deklariert werden, haben einen
+          Funktions- oder globalen Scope:
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>function testVar() {
+  var x = 10;
+  console.log(x);
+}
+
+testVar();</code></pre>
+        <p>Ergebnis: <span class="bg-green-200 p-1 rounded">10</span></p>
+      </div>
+
+      <!-- Let -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">Let</h2>
+        <p class="mb-4">
+          Die `let`-Anweisung deklariert eine Variable mit Block Scope. Das
+          bedeutet, dass die Variable nur innerhalb des Blocks verfügbar ist, in
+          dem sie deklariert wurde:
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>function testLet() {
+  let x = 20;
+  console.log(x);
+}
+
+testLet();</code></pre>
+        <p>Ergebnis: <span class="bg-green-200 p-1 rounded">20</span></p>
+      </div>
+
+      <!-- Const -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">Const</h2>
+        <p class="mb-4">
+          Die `const`-Anweisung deklariert eine konstante Variable, deren Wert
+          nicht geändert werden kann. Ähnlich wie bei `let` hat eine mit `const`
+          deklarierte Variable einen Block Scope:
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>function testConst() {
+  const x = 30;
+  console.log(x);
+}
+
+testConst();</code></pre>
+        <p>Ergebnis: <span class="bg-green-200 p-1 rounded">30</span></p>
+      </div>
+    </div>
+  </body>
+</html>

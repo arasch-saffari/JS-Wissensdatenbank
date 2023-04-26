@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>If-Anweisungen in JavaScript</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold mb-8">If-Anweisungen in JavaScript</h1>
+
+      <!-- If-Anweisung -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">If-Anweisung</h2>
+        <p class="mb-4">
+          Eine if-Anweisung führt einen Codeblock aus, wenn eine Bedingung
+          erfüllt (wahr) ist:
+        </p>
+        <pre class="bg-gray-100 p-4 rounded text-sm mb-4"><code>const zahl = 7;
+
+if (zahl % 2 === 0) {
+  console.log('Die Zahl ist gerade');
+} else {
+  console.log('Die Zahl ist ungerade');
+}</code></pre>
+        <p>
+          Ergebnis:
+          <span class="bg-green-200 p-1 rounded">Die Zahl ist ungerade</span>
+        </p>
+      </div>
+
+      <!-- If-Else If-Else Anweisung -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">If-Else If-Else Anweisung</h2>
+        <p class="mb-4">
+          Eine if-else if-else Anweisung ermöglicht das Testen mehrerer
+          Bedingungen in einer Abfolge:
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>const punktzahl = 78;
+
+if (punktzahl >= 90) {
+  console.log('Ausgezeichnet');
+} else if (punktzahl >= 75) {
+  console.log('Gut');
+} else if (punktzahl >= 50) {
+  console.log('Befriedigend');
+} else {
+  console.log('Ungenügend');
+}</code></pre>
+        <p>Ergebnis: <span class="bg-green-200 p-1 rounded">Gut</span></p>
+      </div>
+    </div>
+  </body>
+</html>

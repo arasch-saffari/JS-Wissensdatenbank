@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grundlagen von Arrays in JavaScript</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold mb-8">
+        Grundlagen von Arrays in JavaScript
+      </h1>
+
+      <!-- Array erstellen -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">Array erstellen</h2>
+        <p class="mb-4">
+          Ein Array ist eine Liste von Werten. So erstellen Sie ein Array in
+          JavaScript:
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>const zahlen = [1, 2, 3, 4, 5];
+const namen = ['Alice', 'Bob', 'Charlie'];
+console.log(zahlen);
+console.log(namen);</code></pre>
+        <p>
+          Ergebnis:
+          <span class="bg-green-200 p-1 rounded">[1, 2, 3, 4, 5]</span> und
+          <span class="bg-green-200 p-1 rounded"
+            >['Alice', 'Bob', 'Charlie']</span
+          >
+        </p>
+      </div>
+
+      <!-- Array-Elemente -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">Array-Elemente</h2>
+        <p class="mb-4">
+          Um auf ein Element in einem Array zuzugreifen, verwenden Sie die
+          eckigen Klammern und den Index des Elements (beginnend bei 0):
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>const namen = ['Alice', 'Bob', 'Charlie'];
+const ersterName = namen[0];
+console.log(ersterName);</code></pre>
+        <p>Ergebnis: <span class="bg-green-200 p-1 rounded">Alice</span></p>
+      </div>
+
+      <!-- Array-Länge -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">Array-Länge</h2>
+        <p class="mb-4">
+          Die length-Eigenschaft gibt die Anzahl der Elemente in einem Array
+          zurück:
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>const namen = ['Alice', 'Bob', 'Charlie'];
+const anzahlNamen = namen.length;
+console.log(anzahlNamen);</code></pre>
+        <p>Ergebnis: <span class="bg-green-200 p-1 rounded">3</span></p>
+      </div>
+
+      <!-- Elemente hinzufügen -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">Elemente hinzufügen</h2>
+        <p class="mb-4">
+          Um einem Array ein Element hinzuzufügen, können Sie die push()-Methode
+          verwenden:
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>const namen = ['Alice', 'Bob', 'Charlie'];
+namen.push('David');
+console.log(namen);</code></pre>
+        <p>
+          Ergebnis:
+          <span class="bg-green-200 p-1 rounded"
+            >['Alice', 'Bob', 'Charlie', 'David']</span
+          >
+        </p>
+      </div>
+
+      <!-- Elemente entfernen -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">Elemente entfernen</h2>
+        <p class="mb-4">
+          Um das letzte Element aus einem Array zu entfernen, verwenden Sie die
+          pop()-Methode:
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>const namen = ['Alice', 'Bob', 'Charlie'];
+const entfernterName = namen.pop();
+console.log(entfernterName);
+console.log(namen);</code></pre>
+        <p>
+          Ergebnis: <span class="bg-green-200 p-1 rounded">Charlie</span> und
+          <span class="bg-green-200 p-1 rounded">['Alice', 'Bob']</span>
+        </p>
+      </div>
+
+      <!-- Array-Iteration -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">Array-Iteration</h2>
+        <p class="mb-4">
+          Um über die Elemente eines Arrays zu iterieren, können Sie eine
+          for-Schleife oder die forEach()-Methode verwenden:
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>const namen = ['Alice', 'Bob', 'Charlie'];
+// for-Schleife
+for (let i = 0; i < namen.length; i++) {
+console.log(namen[i]);
+}
+
+// forEach()-Methode
+namen.forEach((name) => {
+console.log(name);
+});</code></pre>
+        <p>
+          Ergebnis: <span class="bg-green-200 p-1 rounded">Alice</span>,
+          <span class="bg-green-200 p-1 rounded">Bob</span>,
+          <span class="bg-green-200 p-1 rounded">Charlie</span> (zweimal)
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

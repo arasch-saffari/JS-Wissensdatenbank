@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Return in JavaScript</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold mb-8">Function Return in JavaScript</h1>
+
+      <!-- Funktionen mit return -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">Funktionen mit return</h2>
+        <p class="mb-4">
+          In JavaScript können Funktionen Werte zurückgeben, indem sie das
+          Schlüsselwort "return" verwenden, gefolgt vom Wert, der zurückgegeben
+          werden soll:
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>function addiere(a, b) {
+  return a + b;
+}
+
+const summe = addiere(3, 5);
+console.log('Die Summe von 3 und 5 ist', summe);</code></pre>
+        <p>
+          Ergebnis:
+          <span class="bg-green-200 p-1 rounded"
+            >Die Summe von 3 und 5 ist 8</span
+          >
+        </p>
+      </div>
+
+      <!-- Frühe Rückgabe -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">Frühe Rückgabe</h2>
+        <p class="mb-4">
+          Sie können das "return"-Statement verwenden, um eine Funktion
+          frühzeitig zu beenden, bevor der gesamte Funktionscode ausgeführt
+          wurde:
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>function dividiere(a, b) {
+  if (b === 0) {
+    console.log('Division durch Null ist nicht erlaubt.');
+    return;
+  }
+  const ergebnis = a / b;
+  console.log(a + ' geteilt durch ' + b + ' ist ' + ergebnis);
+}
+
+dividiere(10, 0);</code></pre>
+        <p>
+          Ergebnis:
+          <span class="bg-green-200 p-1 rounded"
+            >Division durch Null ist nicht erlaubt.</span
+          >
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

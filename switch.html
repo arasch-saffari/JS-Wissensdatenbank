@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Switch-Anweisung in JavaScript</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold mb-8">Switch-Anweisung in JavaScript</h1>
+
+      <!-- Switch-Anweisung -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">Switch-Anweisung</h2>
+        <p class="mb-4">
+          Eine `switch`-Anweisung ermöglicht das Testen eines Ausdrucks gegen
+          mehrere mögliche Fälle und führt den zugehörigen Codeblock aus, wenn
+          eine Übereinstimmung gefunden wird:
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>const obst = 'Banane';
+
+switch (obst) {
+  case 'Apfel':
+    console.log('Das Obst ist ein Apfel.');
+    break;
+  case 'Banane':
+    console.log('Das Obst ist eine Banane.');
+    break;
+  case 'Kirsche':
+    console.log('Das Obst ist eine Kirsche.');
+    break;
+  default:
+    console.log('Das Obst ist nicht in der Liste.');
+}</code></pre>
+        <p>
+          Ergebnis:
+          <span class="bg-green-200 p-1 rounded"
+            >Das Obst ist eine Banane.</span
+          >
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

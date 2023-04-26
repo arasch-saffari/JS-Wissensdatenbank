@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ternärer Operator in JavaScript</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold mb-8">Ternärer Operator in JavaScript</h1>
+
+      <!-- Ternärer Operator -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">Ternärer Operator</h2>
+        <p class="mb-4">
+          Der ternäre Operator ist eine Abkürzung für if-else-Anweisungen und
+          hat die Syntax: `bedingung ? ausdruck1 : ausdruck2`. Wenn die
+          Bedingung wahr ist, wird Ausdruck1 ausgewertet, sonst Ausdruck2:
+        </p>
+        <pre class="bg-gray-100 p-4 rounded text-sm mb-4"><code>const zahl = 7;
+const istGerade = (zahl % 2 === 0) ? 'gerade' : 'ungerade';
+console.log(istGerade);</code></pre>
+        <p>Ergebnis: <span class="bg-green-200 p-1 rounded">ungerade</span></p>
+      </div>
+    </div>
+  </body>
+</html>

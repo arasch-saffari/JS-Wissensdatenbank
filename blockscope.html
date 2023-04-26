@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Block Scope in JavaScript</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold mb-8">Block Scope in JavaScript</h1>
+
+      <!-- Block Scope -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">Block Scope</h2>
+        <p class="mb-4">
+          Variablen, die mit `let` und `const` innerhalb eines Blocks (z. B.
+          innerhalb einer Funktion oder Schleife) deklariert werden, sind auf
+          diesen Block beschränkt und außerhalb des Blocks nicht verfügbar:
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>function testScope() {
+  let x = 10;
+  const y = 20;
+
+  if (x < y) {
+    let z = 30;
+    console.log('Innerhalb des Blocks:', x, y, z);
+  }
+
+  // Zugriff auf z außerhalb des Blocks verursacht einen Fehler
+  console.log('Außerhalb des Blocks:', x, y); // z ist hier nicht verfügbar
+}
+
+testScope();</code></pre>
+        <p>
+          Ergebnis:
+          <span class="bg-green-200 p-1 rounded"
+            >Innerhalb des Blocks: 10 20 30</span
+          ><br /><span class="bg-green-200 p-1 rounded"
+            >Außerhalb des Blocks: 10 20</span
+          >
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objektscope in JavaScript</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold mb-8">Objektscope in JavaScript</h1>
+
+      <!-- Objektscope -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">Objektscope</h2>
+        <p class="mb-4">
+          In JavaScript haben Objekte ihren eigenen Scope. Das bedeutet, dass
+          Variablen und Funktionen, die innerhalb eines Objekts definiert sind,
+          nur innerhalb des Objekts zugänglich sind, es sei denn, sie werden
+          explizit nach außen hin zugänglich gemacht:
+        </p>
+        <pre class="bg-gray-100 p-4 rounded text-sm mb-4"><code>const objekt = {
+  interneVariable: 'Ich bin intern',
+  interneFunktion: function() {
+    console.log('Die interne Variable ist:', this.interneVariable);
+  },
+  externeFunktion: function() {
+    console.log('Die externe Variable ist:', externeVariable);
+  }
+};
+
+const externeVariable = 'Ich bin extern';
+
+objekt.interneFunktion(); // Zugriff auf die interne Variable
+objekt.externeFunktion(); // Zugriff auf die externe Variable</code></pre>
+        <p>
+          Ergebnis:
+          <span class="bg-green-200 p-1 rounded"
+            >Die interne Variable ist: Ich bin intern</span
+          ><br />
+          Ergebnis:
+          <span class="bg-green-200 p-1 rounded"
+            >Die externe Variable ist: Ich bin extern</span
+          >
+        </p>
+      </div>
+
+      <!-- Zugriff auf Objekteigenschaften und -methoden -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">
+          Zugriff auf Objekteigenschaften und -methoden
+        </h2>
+        <p class="mb-4">
+          Um auf die Eigenschaften und Methoden eines Objekts zuzugreifen,
+          verwenden Sie die Punktnotation oder die eckigen Klammern:
+        </p>
+        <pre class="bg-gray-100 p-4 rounded text-sm mb-4"><code>const person = {
+  name: 'Anna',
+  alter: 30,
+  begruessung: function() {
+    console.log('Hallo, mein Name ist ' + this.name + ' und ich bin ' + this.alter + ' Jahre alt.');
+  }
+};
+
+console.log(person.name); // Zugriff auf die Eigenschaft 'name'
+person.begruessung(); // Zugriff auf die Methode 'begruessung'</code></pre>
+        <p>
+          Ergebnis: <span class="bg-green-200 p-1 rounded">Anna</span><br />
+          Ergebnis:
+          <span class="bg-green-200 p-1 rounded"
+            >Hallo, mein Name ist Anna und ich bin 30 Jahre alt.</span
+          >
+        </p>
+      </div>
+
+      <!-- 'this' in Objekten -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">'this' in Objekten</h2>
+        <p class="mb-4">
+          Das Schlüsselwort 'this' bezieht sich auf das aktuelle Objekt, in dem
+          es verwendet wird. Es ermöglicht den Zugriff auf die Eigenschaften und
+          Methoden des Objekts innerhalb des Objekts:
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>const auto = {marke: 'Tesla',
+modell: 'Model 3',
+gibAutoDetails: function() {
+console.log('Dieses Auto ist ein ' + this.marke + ' ' + this.modell + '.');
+}
+};
+
+auto.gibAutoDetails();</code></pre>
+        <p>
+          Ergebnis:
+          <span class="bg-green-200 p-1 rounded"
+            >Dieses Auto ist ein Tesla Model 3.</span
+          >
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

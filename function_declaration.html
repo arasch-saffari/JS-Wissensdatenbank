@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funktionsdeklarationen in JavaScript</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold mb-8">
+        Funktionsdeklarationen in JavaScript
+      </h1>
+
+      <!-- Funktionen deklarieren -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">Funktionsdeklarationen</h2>
+        <p class="mb-4">
+          Funktionsdeklarationen sind eine Möglichkeit, Funktionen in JavaScript
+          zu definieren. Sie verwenden das Schlüsselwort `function`, gefolgt vom
+          Funktionsnamen, einer Liste von Parametern in Klammern und dem
+          Funktionskörper in geschweiften Klammern:
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>function summe(a, b) {
+  return a + b;
+}
+
+const ergebnis = summe(5, 3);
+console.log('Ergebnis:', ergebnis);</code></pre>
+        <p>
+          Ergebnis: <span class="bg-green-200 p-1 rounded">Ergebnis: 8</span>
+        </p>
+      </div>
+
+      <!-- Hoisting -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">Hoisting</h2>
+        <p class="mb-4">
+          Funktionsdeklarationen werden vom JavaScript-Interpreter vor der
+          Ausführung des Codes "gehoben" (hoisting). Das bedeutet, dass sie
+          überall in ihrem Gültigkeitsbereich (scope) aufgerufen werden können,
+          selbst bevor sie deklariert wurden:
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>const ergebnis2 = multiplikation(5, 3);
+console.log('Ergebnis2:', ergebnis2);
+
+function multiplikation(a, b) {
+  return a * b;
+}</code></pre>
+        <p>
+          Ergebnis: <span class="bg-green-200 p-1 rounded">Ergebnis2: 15</span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
