@@ -1,0 +1,58 @@
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logische Operatoren in JavaScript</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold mb-8">Logische Operatoren in JavaScript</h1>
+
+      <!-- AND (&&) -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">AND (&&)</h2>
+        <p class="mb-4">
+          Der AND-Operator (&&) gibt true zurück, wenn beide Operanden wahr
+          sind, sonst false:
+        </p>
+        <pre class="bg-gray-100 p-4 rounded text-sm mb-4"><code>const a = true;
+const b = false;
+const ergebnis = a && b;
+console.log(ergebnis);</code></pre>
+        <p>Ergebnis: <span class="bg-red-200 p-1 rounded">false</span></p>
+      </div>
+
+      <!-- OR (||) -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">OR (||)</h2>
+        <p class="mb-4">
+          Der OR-Operator (||) gibt true zurück, wenn mindestens einer der
+          Operanden wahr ist, sonst false:
+        </p>
+        <pre class="bg-gray-100 p-4 rounded text-sm mb-4"><code>const a = true;
+const b = false;
+const ergebnis = a || b;
+console.log(ergebnis);</code></pre>
+        <p>Ergebnis: <span class="bg-green-200 p-1 rounded">true</span></p>
+      </div>
+
+      <!-- NOT (!) -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">NOT (!)</h2>
+        <p class="mb-4">
+          Der NOT-Operator (!) gibt true zurück, wenn der Operand falsch ist,
+          und false, wenn der Operand wahr ist. Er kehrt den Wahrheitswert des
+          Operanden um:
+        </p>
+        <pre class="bg-gray-100 p-4 rounded text-sm mb-4"><code>const a = true;
+const ergebnis = !a;
+console.log(ergebnis);</code></pre>
+        <p>Ergebnis: <span class="bg-red-200 p-1 rounded">false</span></p>
+      </div>
+    </div>
+  </body>
+</html>

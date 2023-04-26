@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grundlegende String-Methoden in JavaScript</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-8">Grundlegende String-Methoden in JavaScript</h1>
+
+    <!-- length -->
+    <div class="bg-white p-6 rounded-lg shadow mb-8">
+      <h2 class="text-xl font-semibold mb-4">length</h2>
+      <p class="mb-4">Die Eigenschaft length gibt die Länge eines Strings zurück:</p>
+      <pre class="bg-gray-100 p-4 rounded text-sm mb-4"><code>const text = 'Hallo, Welt!';
+const laenge = text.length;
+console.log(laenge);</code></pre>
+      <p>Ergebnis: <span class="bg-green-200 p-1 rounded">12</span></p>
+    </div>
+
+    <!-- toUpperCase() -->
+    <div class="bg-white p-6 rounded-lg shadow mb-8">
+      <h2 class="text-xl font-semibold mb-4">toUpperCase()</h2>
+      <p class="mb-4">Die Methode toUpperCase() gibt den String in Großbuchstaben zurück:</p>
+      <pre class="bg-gray-100 p-4 rounded text-sm mb-4"><code>const text = 'Hallo, Welt!';
+const grossbuchstaben = text.toUpperCase();
+console.log(grossbuchstaben);</code></pre>
+      <p>Ergebnis: <span class="bg-green-200 p-1 rounded">HALLO, WELT!</span></p>
+    </div>
+
+    <!-- toLowerCase() -->
+    <div class="bg-white p-6 rounded-lg shadow mb-8">
+      <h2 class="text-xl font-semibold mb-4">toLowerCase()</h2>
+      <p class="mb-4">Die Methode toLowerCase() gibt den String in Kleinbuchstaben zurück:</p>
+      <pre class="bg-gray-100 p-4 rounded text-sm mb-4"><code>const text = 'Hallo, Welt!';
+const kleinbuchstaben = text.toLowerCase();
+console.log(kleinbuchstaben);</code></pre>
+      <p>Ergebnis: <span class="bg-green-200 p-1 rounded">hallo, welt!</span></p>
+    </div>
+
+    <!-- indexOf() -->
+    <div class="bg-white p-6 rounded-lg shadow mb-8">
+      <h2 class="text-xl font-semibold mb-4">indexOf()</h2>
+      <p class="mb-4">Die Methode indexOf() gibt den ersten Index zurück, an dem das angegebene Zeichen oder der angegebene String gefunden wird, oder -1, wenn es nicht gefunden wird:</p>
+      <pre class="bg-gray-100 p-4 rounded text-sm mb-4"><code>const text = 'Hallo, Welt!';
+const index = text.indexOf('Welt');
+console.log(index);</code></
+<pre>
+</code></pre>
+  <p>Ergebnis: <span class="bg-green-200 p-1 rounded">7</span></p>
+</div>
+
+<!-- slice() -->
+<div class="bg-white p-6 rounded-lg shadow mb-8">
+  <h2 class="text-xl font-semibold mb-4">slice()</h2>
+  <p class="mb-4">Die Methode slice() extrahiert einen Teil des Strings und gibt diesen als neuen String zurück:</p>
+  <pre class="bg-gray-100 p-4 rounded text-sm mb-4"><code>const text = 'Hallo, Welt!';
+const ausschnitt = text.slice(7);
+console.log(ausschnitt);</code></pre>
+<p>Ergebnis: <span class="bg-green-200 p-1 rounded">Welt!</span></p>
+</div>
+<!-- replace() -->
+<div class="bg-white p-6 rounded-lg shadow mb-8">
+  <h2 class="text-xl font-semibold mb-4">replace()</h2>
+  <p class="mb-4">Die Methode replace() ersetzt einen Teil des Strings durch einen anderen String:</p>
+  <pre class="bg-gray-100 p-4 rounded text-sm mb-4"><code>const text = 'Hallo, Welt!';
+const neuerText = text.replace('Welt', 'JavaScript');
+console.log(neuerText);</code></pre>
+<p>Ergebnis: <span class="bg-green-200 p-1 rounded">Hallo, JavaScript!</span></p>
+</div>
+
+  </div>
+</body>
+</html>

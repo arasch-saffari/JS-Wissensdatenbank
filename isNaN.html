@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>isNaN in JavaScript</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold mb-8">isNaN in JavaScript</h1>
+
+      <!-- isNaN() -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">isNaN()</h2>
+        <p class="mb-4">
+          Die isNaN-Funktion (is Not a Number) wird verwendet, um zu überprüfen,
+          ob ein Wert keine Zahl ist. Sie gibt true zurück, wenn der Wert keine
+          Zahl ist, und false, wenn der Wert eine Zahl ist:
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>const wert1 = 'Hallo!';
+const wert2 = 42;
+
+console.log(isNaN(wert1));
+console.log(isNaN(wert2));</code></pre>
+        <p>
+          Ergebnis: <span class="bg-green-200 p-1 rounded">true</span> und
+          <span class="bg-red-200 p-1 rounded">false</span>
+        </p>
+      </div>
+
+      <!-- isNaN() mit Zahlen im String -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">isNaN() mit Zahlen im String</h2>
+        <p class="mb-4">
+          Wenn ein String nur aus Zahlen besteht, wird isNaN() false
+          zurückgeben, da der String in eine Zahl konvertiert werden kann:
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>const nummernString = '12345';
+console.log(isNaN(nummernString));</code></pre>
+        <p>Ergebnis: <span class="bg-red-200 p-1 rounded">false</span></p>
+      </div>
+
+      <!-- isNaN() mit Floats -->
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-xl font-semibold mb-4">isNaN() mit Floats</h2>
+        <p class="mb-4">
+          Die isNaN-Funktion gibt auch false zurück, wenn der Wert eine
+          Fließkommazahl ist:
+        </p>
+        <pre
+          class="bg-gray-100 p-4 rounded text-sm mb-4"
+        ><code>const floatWert = 3.14159;
+console.log(isNaN(floatWert));</code></pre>
+        <p>Ergebnis: <span class="bg-red-200 p-1 rounded">false</span></p>
+      </div>
+    </div>
+  </body>
+</html>
